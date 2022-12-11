@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/bb1e6e1afa.js"
+            crossorigin="anonymous"
+        ></script>
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        />
+        <link rel="stylesheet" href="/css/style.css" />
+        <title><%= title %></title>
+    </head>
+    <body>
+        <!--HEADER  -->
+        <%- include("./partials/header.ejs") %>
+
+        <!-- CONTENT  -->
+        <%- content %>
+
+        <!-- FOOTER -->
+        <%- include("./partials/footer.ejs") %>
+
+        <!-- <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.0/axios.min.js"
+            integrity="sha512-OdkysyYNjK4CZHgB+dkw9xQp66hZ9TLqmS2vXaBrftfyJeduVhyy1cOfoxiKdi4/bfgpco6REu6Rb+V2oVIRWg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script> -->
+        <script src="/js/bundle.js"></script>
+    </body>
+</html>

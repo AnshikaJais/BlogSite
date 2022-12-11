@@ -1,0 +1,28 @@
+<% extend("base") %>
+
+<div class="container-fluid overview-container">
+    <% if(typeof user === "object" && user === null) { %>
+    <div class="warning"><p>You need to login first!!</p></div>
+    <% } %>
+    <div class="main-section">
+        <% blogs.forEach((blog)=>{ %>
+        <div class="card" style="width: 20rem">
+            <img
+                src="/img/<%=blog.user.photo%>"
+                class="card-img-top"
+                alt="<%=blog.user.name%>"
+            />
+            <div class="card-body">
+                <h5 class="card-title"><%= blog.title %></h5>
+                <p class="card-text"><%= blog.subTitle %></p>
+                <p>❤️ <%= blog.commentsQuantity %></p>
+                <a
+                    href="/blog/<%=blog.title%>"
+                    class="btn btn-outline-success view-blog-btn"
+                    >View Blog -></a
+                >
+            </div>
+        </div>
+        <% }) %>
+    </div>
+</div>

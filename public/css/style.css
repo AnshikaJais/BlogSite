@@ -1,0 +1,243 @@
+/* KEYFRAME */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* NAVBAR */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    padding: 1rem 3rem;
+}
+nav a i {
+    font-size: 50px;
+    color: lightgreen;
+    margin-left: 15px;
+}
+nav .nav-link {
+    font-size: 20px;
+    color: gray;
+}
+nav .nav-link:hover {
+    color: lightgreen;
+}
+nav .btn:hover {
+    color: white;
+}
+
+nav .nav-link:last-child {
+    margin-right: 20px;
+}
+
+/* MAIN SECTION */
+.main-section {
+    margin: 100px 200px;
+    display: grid;
+    grid-gap: 30px 50px;
+    grid-template-columns: repeat(3, max-content);
+}
+.warning p {
+    margin-top: 20px;
+    color: red;
+    font-size: large;
+    text-align: center;
+}
+
+/* BLOG */
+.blog,
+.comments {
+    padding: 2rem 15rem 0;
+}
+.blog__title h1 {
+    font-size: 70px;
+    margin-bottom: 1rem;
+}
+.blog__title h3 {
+    color: lightslategray;
+}
+.blog-description {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 19px;
+    margin: 1rem 0;
+}
+.blog-writer-info,
+.current-user-info,
+.post-user-info {
+    display: flex;
+    align-items: flex-end;
+}
+.blog-writer-info img,
+.current-user-info img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.blog-writer-info p,
+.current-user-info p,
+.post-user-info p {
+    font-family: cursive;
+    color: lightslategray;
+}
+.blog-writer-info span {
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    align-self: center;
+}
+.comment-form {
+    margin: 1rem 0;
+}
+.comment-form button {
+    margin-top: 5px;
+}
+.comments {
+    padding: 2rem 25rem;
+}
+.post-user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+.post-user-info p {
+    font-size: 1rem;
+}
+.posted-comment > p {
+    padding: 0 3rem;
+    margin-top: -0.5rem;
+}
+
+/* LOGIN FORM */
+.login-form,
+.signup-form,
+.post-blog-form {
+    margin: 2rem 28rem;
+    min-height: 50vh;
+}
+
+.login-form h2,
+.signup-form h2,
+.post-blog-form h2 {
+    text-align: center;
+    font-size: 4rem;
+    color: darkslateblue;
+    margin-bottom: 2rem;
+}
+
+.login-form .login-options,
+.signup-form .signup-options {
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+.login-form .login-options button,
+.signup-form .signup-options button {
+    margin: 0 1rem;
+}
+.login-form .login-options button i,
+.signup-form .signup-options button i {
+    font-size: 25px;
+    margin-right: 5px;
+}
+
+.login-form p,
+.signup-form p {
+    text-align: center;
+    color: lightgreen;
+    font-size: 20px;
+}
+
+/* ABOUT */
+.about {
+    min-height: calc(100vh - 15rem);
+    padding: 50px 100px;
+}
+.about span {
+    font-size: 60px;
+    color: lightgreen;
+    font-weight: bolder;
+}
+.about p {
+    font-size: 20px;
+    color: black;
+}
+
+/* FOOTER */
+.footer {
+    background-color: darkslateblue;
+    padding: 5rem 10rem;
+}
+.footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer i {
+    font-size: 40px;
+    color: white;
+    margin: 0 20px;
+    cursor: pointer;
+}
+.footer i:hover {
+    animation: rotate 0.5s;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 1300px) {
+    .login-form,
+    .signup-form,
+    .post-blog-form {
+        margin: 2rem 23rem;
+    }
+    .login-form .login-options,
+    .signup-form .signup-options {
+        display: block;
+    }
+    .login-form .login-options button,
+    .signup-form .signup-options button {
+        width: 100%;
+        margin: 0;
+    }
+    .login-form .login-options button:not(:last-child),
+    .signup-form .signup-options button:not(:last-child) {
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .login-form,
+    .signup-form,
+    .post-blog-form {
+        margin: 2rem 14rem;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .login-form,
+    .signup-form,
+    .post-blog-form {
+        margin: 2rem 8rem;
+    }
+}
+@media only screen and (max-width: 430px) {
+    .login-form,
+    .signup-form,
+    .post-blog-form {
+        margin: 2rem 3rem;
+    }
+}

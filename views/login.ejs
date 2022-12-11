@@ -1,0 +1,33 @@
+<% extend("base") %>
+<form class="login-form form">
+    <h2>Login Form</h2>
+    <!-- <div class="container login-options">
+        <a href="/auth/google" class="btn btn-outline-secondary btn-lg">
+            <i class="fa-brands fa-google"></i>Login with Google
+        </a>
+        <a href="/auth/github" class="btn btn-outline-secondary btn-lg">
+            <i class="fa-brands fa-github"></i>Login with Github
+        </a>
+    </div> -->
+    <!-- <p>or</p> -->
+
+    <div class="mb-3">
+        <label for="login-email" class="form-label">Email</label>
+        <input
+            type="email"
+            class="form-control"
+            id="login-email"
+            aria-describedby="emailHelp"
+        />
+        <div id="emailHelp" class="form-text">
+            We'll never share your email with anyone else.
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="login-password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="login-password" />
+    </div>
+    <button type="submit" class="btn btn-outline-secondary btn-md">
+        Submit
+    </button>
+</form>

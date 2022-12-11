@@ -1,0 +1,36 @@
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/overview">
+            <i class="fa-solid fa-blog"></i>
+        </a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a
+                    class="nav-link btn btn-outline-success"
+                    aria-current="page"
+                    href="/post"
+                    >Post Blog</a
+                >
+            </li>
+            <% if(typeof user === "object" && user === null){ %>
+            <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/login">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/signup">Signup</a>
+            </li>
+            <% } else { %>
+            <li class="nav-item">
+                <a class="nav-link" id="logout-btn" href="/overview">Logout</a>
+            </li>
+            <% } %>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/contact">Contact us</a>
+            </li>
+        </ul>
+    </div>
+</nav>

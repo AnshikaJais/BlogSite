@@ -1,0 +1,38 @@
+<% extend("base") %>
+
+<div class="postBlog">
+    <form class="post-blog-form">
+        <h2>Post Blog</h2>
+        <div class="mb-3">
+            <input
+                type="hidden"
+                name="blog-user-name"
+                value="<%= user.name %>"
+            />
+            <input
+                type="hidden"
+                name="blog-user-email"
+                value="<%= user.email %>"
+            />
+            <input type="hidden" name="blog-user-id" value="<%= user.id %>" />
+        </div>
+        <div class="mb-3">
+            <label for="blog-title" class="form-label">Blog Title</label>
+            <input type="text" class="form-control" id="blog-title" autofocus />
+        </div>
+        <div class="mb-3">
+            <label for="blog-subtitle" class="form-label">Blog Subtitle</label>
+            <input type="text" class="form-control" id="blog-subtitle" />
+        </div>
+        <textarea
+            class="form-control"
+            id="blog-description"
+            rows="15"
+            placeholder="Write your blog..."
+        ></textarea>
+
+        <button type="submit" class="btn btn-outline-secondary btn-md">
+            Submit
+        </button>
+    </form>
+</div>
